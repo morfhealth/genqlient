@@ -43,6 +43,7 @@ func readConfigGenerateAndWrite(configFilename string) error {
 		}
 
 		err = os.WriteFile(filename, content, 0o644)
+		fmt.Printf("Writing output file %v", filename)
 		if err != nil {
 			return errorf(nil, "could not write generated file %v: %v",
 				filename, err)
